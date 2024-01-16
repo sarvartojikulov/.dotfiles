@@ -1,7 +1,5 @@
 # CodeWhisperer pre block. Keep at the top of this file.
 [[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.pre.zsh"
-# Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 source_if_exists () {
     if test -r "$1"; then
         source "$1"
@@ -46,9 +44,6 @@ bindkey '^?' backward-delete-char
 # FNM
 eval "$(fnm env --use-on-cd)"
 
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
-
 # bun completions
 [ -s "/Users/sarvartojikulov/.bun/_bun" ] && source "/Users/sarvartojikulov/.bun/_bun"
 
@@ -61,13 +56,13 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 
 
-#JDK
+# JAVA VERSIONS
 
-jdk () {
-        version=$1
-        export JAVA_HOME=$(/usr/libexec/java_home -v"$version")
-        java -version
-}
-export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
-export PATH="/usr/local/opt/openjdk@17/bin:$PATH"
-export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
+export JAVA_21_HOME=$(/usr/libexec/java_home -v 21)
+export JAVA_11_HOME=$(/usr/libexec/java_home -v 11)
+
+alias java21="export JAVA_HOME=$JAVA_21_HOME"
+alias java11="export JAVA_HOME=$JAVA_11_HOME"
+
+#set default to Java 11
+java11
