@@ -59,10 +59,20 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # JAVA VERSIONS
 
 export JAVA_21_HOME=$(/usr/libexec/java_home -v 21)
+export JAVA_17_HOME=$(/usr/libexec/java_home -v 17)
 export JAVA_11_HOME=$(/usr/libexec/java_home -v 11)
 
 alias java21="export JAVA_HOME=$JAVA_21_HOME"
+alias java17="export JAVA_HOME=$JAVA_17_HOME"
 alias java11="export JAVA_HOME=$JAVA_11_HOME"
 
 #set default to Java 11
 java11
+
+# pnpm
+export PNPM_HOME="/Users/sarvartojikulov/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
