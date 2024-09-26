@@ -28,3 +28,8 @@ alias tree="eza --tree"
 
 bindkey -s ^f "tmux-sessionizer\n"
 bindkey -s ^G "lazygit\n"
+
+
+# Connections
+
+alias ssh_pi="ssh pi@192.168.2.3"
