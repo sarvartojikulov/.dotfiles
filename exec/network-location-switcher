@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Ensure fzf is installed
+if ! command -v fzf &> /dev/null
+then
+    echo "fzf could not be found. Please install fzf."
+    exit 1
+fi
+
+# List all available network locations using networksetup
+locations=$(networksetup -listlocations)
+
+# Use fzf to select a network location
+selected_location=$(echo "$locations" | fzf --prompt="Select a network location: ")
+
+# If a location is selected, change to that location
+if [ -n "$selected_location" ]; then
+    echo "Switching to network location: $selected_location"
+    networksetup -switchtolocation "$selected_location"
+    echo "Network location switched to: $selected_location"
+else
+    echo "No location selected. Exiting."
+fi
