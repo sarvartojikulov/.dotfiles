@@ -1,5 +1,7 @@
 [window]
-opacity = 0.95
+opacity = 0.88
+
+decorations = "Buttonless"
 
 [window.padding]
 x = 10

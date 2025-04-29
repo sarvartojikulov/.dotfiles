@@ -1,0 +1,12 @@
+
+background-opacity = 0.88
+window-decoration = server 
+window-padding-x = 10
+window-padding-y = 10
+
+font-size = 14.0
+font-family = "Fira Code"
+font-family-bold = "Fira Code"
+font-style-bold = "Bold"
+font-family-italic = "Fira Code"
+font-style-italic = "Italic"

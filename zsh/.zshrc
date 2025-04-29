@@ -6,6 +6,8 @@ source_if_exists () {
     fi
 }
 
+export PATH=$PATH:/usr/local/go/bin
+
 source_if_exists $HOME/.env.sh
 source_if_exists $HOME/.zsh-scripts/history.zsh
 source_if_exists $HOME/.zsh-scripts/git.zsh
@@ -14,6 +16,8 @@ source_if_exists $HOME/.zsh-scripts/aliases.zsh
 
 source_if_exists /usr/local/etc/profile.d/z.sh
 source_if_exists /opt/homebrew/etc/profile.d/z.sh
+
+source_if_exists ~/.venv/bin/activate
 
 if type "direnv" > /dev/null; then
     eval "$(direnv hook zsh)"
@@ -77,3 +81,6 @@ case ":$PATH:" in
 esac
 # pnpm end
 . "/Users/sarvartojikulov/.deno/env"
+
+# Created by `pipx` on 2025-02-17 08:26:02
+export PATH="$PATH:/Users/sarvartojikulov/.local/bin"
