@@ -84,3 +84,4 @@ esac
 
 # Created by `pipx` on 2025-02-17 08:26:02
 export PATH="$PATH:/Users/sarvartojikulov/.local/bin"
+export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"

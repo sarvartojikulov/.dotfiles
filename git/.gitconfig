@@ -1,0 +1,2 @@
+[includeIf "gitdir:~/personal/antoha/"]
+    path = ~/.dotfiles/git/.gitconfig_private
