@@ -71,7 +71,7 @@ alias java17="export JAVA_HOME=$JAVA_17_HOME"
 alias java11="export JAVA_HOME=$JAVA_11_HOME"
 
 #set default to Java 11
-java17
+java21
 
 # pnpm
 export PNPM_HOME="/Users/sarvartojikulov/Library/pnpm"
